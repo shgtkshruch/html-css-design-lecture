@@ -1,15 +1,16 @@
-section
-  - var entries = [];
-  - entries[0] = {title: '冬のコーヒーギフト', text: '大切なあの方にありがとうを届けたい。心も体も温まる素敵なギフト。プレゼントキャンペーン実施中！'};
-  - entries[1] = {title: 'あの人気店コラボメニュー', text: '今話題の人気店、Macaro’n Thingsのパンケーキを使ったコラボ商品のセットメニューを販売中。'};
+section.l-column
+  .l-row
+    - var entries = [];
+    - entries[0] = {title: '冬のコーヒーギフト', text: '大切なあの方にありがとうを届けたい。心も体も温まる素敵なギフト。プレゼントキャンペーン実施中！'};
+    - entries[1] = {title: 'あの人気店コラボメニュー', text: '今話題の人気店、Macaro’n Thingsのパンケーキを使ったコラボ商品のセットメニューを販売中。'};
 
-  each entry, i in entries
-    .EntryPanel
-      .EntryPanel__sub
-        img.EntryPanel__thumb(src=`images/top/entry${i+1}.jpg` alt="")
-      .EntryPanel__main
-        h3.EntryPanel__head= entry.title
-        .EntryPanel__body= entry.text
-        .EntryPanel__foot
-          a.button(href="#") READ MORE
+    each entry, i in entries
+      .EntryPanel.l-halfColumn
+        .EntryPanel__sub
+          img.EntryPanel__thumb(src=`images/top/entry${i+1}.jpg` alt="")
+        .EntryPanel__main
+          h3.EntryPanel__head= entry.title
+          .EntryPanel__body= entry.text
+          .EntryPanel__foot
+            a.button(href="#") READ MORE
 
