@@ -1,0 +1,12 @@
+section.Section__item.l-column
+  .l-row
+    - var panels = [];
+    - panels[0] = {title: 'こだわりの空間', text: 'ランチからディナーまでいつでもリラックスして使えるくつろぎ空間。椅子や壁、細部にまでこだわっています。'}
+    - panels[1] = {title: '豆へのこだわり', text: '原産地、豆の種類、焙煎方法のこだわりを紹介します。'}
+    - panels[2] = {title: 'コーヒースクール', text: 'コーヒー豆の基礎知識から、美味しいコーヒーを淹れるコツをお教えします。'}
+    - panels[3] = {title: 'BLOG', text: 'お店の最新情報を、いち早くお届け。'}
+    each panel, i in panels
+      a.IconPanel.l-quaterColumn(href="#")
+        h3.IconPanel__head= panel.title
+        p.IconPanel__body= panel.text
+

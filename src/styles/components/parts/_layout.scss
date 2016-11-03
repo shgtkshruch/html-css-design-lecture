@@ -19,6 +19,13 @@
       margin-right: 0;
     }
   }
+  &-quaterColumn {
+    flex: 1 0 0;
+    max-width: ($base-content-width - $column-space * 3) / 4;
+    &:not(:last-child) {
+      margin-right: $column-space;
+    }
+  }
   &-harlTile {
     display: flex;
     flex: 1 1 50%;
