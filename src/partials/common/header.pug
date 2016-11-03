@@ -1,0 +1,8 @@
+header.Header
+  .Header__head
+    h1.logo Site Name
+  nav.Header__body
+    ul.Menu
+      each text in ['Services', 'Work', 'About', 'Blog', 'Contact']
+        li
+          a.Menu__item(href="#")= text
