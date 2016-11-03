@@ -1,0 +1,6 @@
+.Section {
+  margin-bottom: $space-unit * 2;
+  &__item:not(:last-child) {
+    margin-bottom: $space-unit * 2;
+  }
+}

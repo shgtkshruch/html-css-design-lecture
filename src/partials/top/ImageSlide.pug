@@ -1,0 +1,12 @@
+.ImageSlide.Section
+  ul#Slide.ImageSlide__main
+    each text, i in ['tea', 'coffee', 'food']
+      li.ImageSlide__item.js-slide-item
+        a(href="#")
+          img.ImageSlide__image(src=`images/top/slide${i+1}.jpg` alt=`about our ${text}` width="1180" height="490")
+
+  .ImageSlide__sub
+    - var i = 0;
+    while i < 3
+      .ImageSlide__dot.js-slide-point(class={'isActive': i === 1})= `image${i}`
+      - i++;
